@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlueNotify.Views.Explorer"
+             Title="Explorer"
+             Shell.NavBarIsVisible="false">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <VerticalStackLayout Grid.Column="0" Spacing="10" Margin="10">
+            <Label Text="Actions"/>
+            <Button Text="Get Installation List"/>
+            <Button Text="Delete Device"/>
+            <Button Text="Get Device"/>
+            <Button Text="Send iOS Notification"/>
+        </VerticalStackLayout>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="9.5*"/>
+                </Grid.RowDefinitions>
+                <Label Text="Request Payload" Grid.Row="0"/>
+                <Border Grid.Row="1"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 0"
+                        Padding="0">
+                    <ScrollView>
+                        <Editor AutoSize="TextChanges" />
+                    </ScrollView>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="1" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="9.5*"/>
+                </Grid.RowDefinitions>
+                <Label Text="Response Payload" Grid.Row="0"/>
+                <Border Grid.Row="1" 
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 0"
+                        Padding="0">
+                    <ScrollView>
+                        <Editor AutoSize="TextChanges" IsReadOnly="True" />
+                    </ScrollView>
+                </Border>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>
