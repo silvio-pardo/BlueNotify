@@ -16,19 +16,19 @@
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
         <StackLayout Grid.Column="1" Grid.Row="1" Spacing="10">
-            <Entry x:Name="NHConnection"
-            Placeholder="Connection String" />
-            <Entry x:Name="NHName"
+            <Entry x:Name="NHConnection" Text="{Binding HubUrl, Mode=TwoWay}"
+            Placeholder="Connection String"/>
+            <Entry x:Name="NHName" Text="{Binding HubName, Mode=TwoWay}"
             Placeholder="Hub Name" />
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="5*"/>
                     <ColumnDefinition Width="5*"/>
                 </Grid.ColumnDefinitions>
-                <Button Text="Set" Grid.Column="0"
-                    HorizontalOptions="Start"/>
-                <Button Text="Validate" Grid.Column="1"
-                    HorizontalOptions="End"/>
+                <Button Text="Reset" Grid.Column="0"
+                    HorizontalOptions="Start" Clicked="EndButtonClicked"/>
+                <Button Text="Set" Grid.Column="1"
+                    HorizontalOptions="End" Clicked="StartButtonClicked"/>
             </Grid>
         </StackLayout>
     </Grid>

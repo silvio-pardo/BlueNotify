@@ -3,7 +3,8 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        x:Class="BlueNotify.AppShell"
        xmlns:view="clr-namespace:BlueNotify.Views"
-       Title="BlueNotify">
+       Title="BlueNotify"
+       FlyoutBackground="#454545">
     <FlyoutItem Title="Explorer">
         <Tab>
             <ShellContent ContentTemplate="{DataTemplate view:Explorer}" />
